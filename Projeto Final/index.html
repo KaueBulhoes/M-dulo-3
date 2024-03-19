@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Banco - KBG</title>
+</head>
+
+<body class="container">
+    <header>
+        <div class="container">
+            <h1>KBG Bank</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="abrirConta">Abra sua conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container-toggle" id="criacaoConta">
+            <form class="formularios" id="formConta">
+                <div>
+                    <label for="numeroConta">Número da conta</label>
+                    <input type="number" class="input-number" id="numeroConta" required>
+                </div>
+                <div>
+                    <label for="saldoInicial">Saldo inicial</label>
+                    <input type="number" class="input-number" id="saldoInicial" required>
+                </div>
+                <div>
+                    <label for="nomeUsuario">Nome de usuário</label>
+                    <input type="text" id="nomeUsuario" required>
+                </div>
+                <div>
+                    <label for="profissao">Profissão</label>
+                    <input type="text" id="profissao" required>
+                </div>
+                <button type="submit">Criar Conta</button>
+            </form>
+            <p id="mensagem"></p>
+        </div>
+        <div class="botoesCheck">
+            <button id="checarExtrato">Acessar Contas Criadas</button>
+            <button type="button" id="consultaContaCorrente">Acessar Contas Correntes</button>
+            <button type="button" id="consultaContaPoupanca">Acessar Contas Poupança</button>
+            <button id="instrucoesGerais">Instruções Gerais</button>
+        </div>
+        <div class="mensagens">
+            <p id="mensagemExtrato"></p>
+            <ul id="listaContas"></ul>
+        </div>
+        <div class="container-toggle" id="formConsultaContaCorrente">
+            <form class="formularios">
+                <div>
+                    <label for="numeroContaCorrente">Número da conta corrente</label>
+                    <input type="number" class="input-number" id="numeroContaCorrente" required>
+                </div>
+                <button type="submit">Consultar Conta Corrente</button>
+            </form>
+            <div class="container-toggle" id="attChequeEspecial">
+                <h3>Deseja alterar o valor do cheque especial?</h3>
+                <button type="button" id="simChequeEspecial">Sim</button>
+                <button type="button" id="naoChequeEspecial">Não</button>
+                <div id="novoValorChequeEspecial">
+                    <input type="number" id="novoValorChequeEspecial">
+                    <button type="button">Atualizar valor</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-toggle" id="formConsultaContaPoupanca">
+            <form class="formularios">
+                <div>
+                    <label for="numeroContaPoupanca">Número da conta poupança</label>
+                    <input type="number" class="input-number" id="numeroContaPoupanca" required>
+                </div>
+                <button type="submit">Consultar Conta Poupança</button>
+            </form>
+            <div class="container-toggle" id="attLimiteSaquesPoupanca">
+                <h3>Deseja alterar o limite de saques?</h3>
+                <button type="button" id="simLimiteSaquesPoupanca">Sim</button>
+                <button type="button" id="naoLimiteSaquesPoupanca">Não</button>
+                <div id="novoLimiteSaquesPoupanca">
+                    <input type="number" id="novoLimiteSaquesPoupanca">
+                    <button type="button">Atualizar limite</button>
+                </div>
+            </div>
+        </div>
+        <p id="mensagemContaCorrente"></p>
+        <p id="mensagemContaPoupanca"></p>
+        <p id="mensagemChequeEspecial"></p>
+        <div>
+            <h2 id="soliciteEmprestimoLink"><a href="#">Solicite já o seu empréstimo</a></h2>
+            <form class="formularios container-toggle" id="soliciteEmprestimo">
+                <div>
+                    <label>Número da conta:</label>
+                    <input type="number" id="contaEmprestimo">
+                </div>
+                <div>
+                    <label>Quantia desejada:</label>
+                    <input type="number" id="valorEmprestimo">
+                </div>
+                <p id="mensagemEmprestimo"></p>
+                <button type="submit">Solicitar empréstimo</button>
+            </form>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
